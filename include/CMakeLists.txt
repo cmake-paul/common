@@ -4,4 +4,4 @@ target_include_directories(
     "${CMAKE_CURRENT_LIST_DIR}"
 )
 
-add_subdirectory(Common)
+add_subdirectory(common)
