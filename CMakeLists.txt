@@ -1,13 +1,13 @@
-add_library(common INTERFACE)
+add_library(Common INTERFACE)
 
 add_subdirectory(include)
 
-add_library(common_umbrella INTERFACE)
+add_library(CommonUmbrella INTERFACE)
 
 target_link_libraries(
-    common_umbrella
+    CommonUmbrella
     INTERFACE
-    common
+    Common
 )
 
 function(register_with_common)
@@ -31,7 +31,7 @@ function(register_with_common)
     endif()
 
     target_link_libraries(
-        common_umbrella
+        CommonUmbrella
         INTERFACE
         ${RI_ARG_IMPLEMENTATION}
     )
