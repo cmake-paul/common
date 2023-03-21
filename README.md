@@ -20,4 +20,6 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(Common)
 ```
 
-Then link against the target `CommonUmbrella`.
+When implementing something that depends on the interface defined in `common`, link against the target `CommonUmbrella`.
+
+When providing an implementation of said interface, register the implementation using `register_with_common(IMPLEMENTATION ${implementing_target})`.
